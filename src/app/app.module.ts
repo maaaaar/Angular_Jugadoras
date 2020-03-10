@@ -1,18 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppRoutingModule, routingComponents } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { PrincipalComponent } from "./principal/principal.component";
+import { JugadorasComponent } from "./jugadoras/jugadoras.component";
+import { JugadoraDetailComponent } from "./jugadora-detail/jugadora-detail.component";
+import { JugadorasService } from "./jugadoras.service";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PrincipalComponent,
+    JugadorasComponent,
+    JugadoraDetailComponent,
+    routingComponents
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule],
+  providers: [JugadorasService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

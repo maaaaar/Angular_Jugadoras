@@ -1,0 +1,18 @@
+<div class="card-deck px-3">
+  <div *ngFor="let jugadora of jugadoras; index as detail">
+    <div class="card mycard">
+      <div class="card-header">
+        <img class="card-img-top" src="{{ jugadora.img }}" alt="" />
+      </div>
+      <div class="card-body">
+        <h4 class="card-title text-center">{{ jugadora.nombre }}</h4>
+        <p class="card-text text-center">{{ jugadora.posicion }}</p>
+        <a
+          [routerLink]="['/jugadora', detail]"
+          class="btn btn-dark d-flex justify-content-center"
+          >Detalls</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
